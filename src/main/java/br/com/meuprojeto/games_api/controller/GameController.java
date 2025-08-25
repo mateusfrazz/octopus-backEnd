@@ -18,4 +18,7 @@ public class GameController {
       return gameService.fetchGamesFromRawg();
   }
 
+  @GetMapping
+    public
+
 }
