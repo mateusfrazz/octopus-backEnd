@@ -12,13 +12,9 @@ public class GameController {
     private GameService gameService;
 
   @GetMapping // metodo usado para responder a requisicoes GET para a api
-    public String getGames() {
+    public GamesResponseDTO getGamesAll getAllGames() {
       // O controller pede o service fazer o trabalho pesado e resposta
       return gameService.fetchGamesFromRawg();
   }
 
-  @DeleteMapping
-  public void deletarGames(){
-
-  }
 }
