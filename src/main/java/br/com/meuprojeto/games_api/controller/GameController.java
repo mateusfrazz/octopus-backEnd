@@ -1,4 +1,5 @@
 package br.com.meuprojeto.games_api.controller;
+import br.com.meuprojeto.games_api.dto.GameResponseDTO;
 import br.com.meuprojeto.games_api.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ public class GameController {
     private GameService gameService;
 
   @GetMapping // metodo usado para responder a requisicoes GET para a api
-    public GamesResponseDTO getGamesAll getAllGames() {
+    public GameResponseDTO getAllGames () {
       // O controller pede o service fazer o trabalho pesado e resposta
       return gameService.fetchGamesFromRawg();
   }
